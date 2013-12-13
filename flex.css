@@ -1,0 +1,103 @@
+.flexrow
+   {
+      /* flexbox setup */
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+
+      display: flex;
+      flex-direction: row;
+   }
+.flexcolumn
+   {
+      /* flexbox setup */
+      display: -webkit-flex;
+      -webkit-flex-direction: column;
+
+      display: flex;
+      flex-direction: column;
+   }
+.move
+   {
+      /* basic styling */
+      width: 250px;
+      height: 200px;
+      border: 1px solid #555;
+      font: 14px Arial;
+   }
+
+   .move > div
+   {
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+
+      width: 30px; /* To make the transition work nicely.  (Transitions to/from
+                      "width:auto" are buggy in Gecko and Webkit, at least.
+                      See http://bugzil.la/731886 for more info.) */
+
+      -webkit-transition: width 0.5s ease-out;
+      transition: width 0.5s ease-out;
+    
+    overflow:hidden
+   }
+
+   /* colors */
+   .move > div:nth-child(1){ background : #e1f1fa; }
+   .move > div:nth-child(2){ background : #134886; }
+   .move > div:nth-child(3){ background : #023458; }
+
+   .move> div:hover
+   {
+        width: 200px;
+   }
+
+.justifyContent {
+    margin: 20px;
+/*    background-color: Silver;*/
+/*    width: 300px;*/
+
+}
+
+.justifyContent .flex-item {
+    background-color: DeepSkyBlue;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+}
+.justifyContent > div {
+    /* flexbox setup */
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    
+    margin-bottom: 10px;
+    border: 1px solid #0e86ad;
+    background-color: lightgray;
+
+}
+
+.justifyContent > div:nth-child(1){
+     -webkit-justify-content: center;
+    justify-content: center;
+
+}
+.justifyContent > div:nth-child(2){
+    -webkit-justify-content:flex-start;
+    justify-content:flex-start;
+
+}
+.justifyContent > div:nth-child(3){
+    -webkit-justify-content:flex-end;
+    justify-content:flex-end;
+
+}
+.justifyContent > div:nth-child(4){
+    -webkit-justify-content:space-around;
+    justify-content:space-around;
+
+}
+.justifyContent > div:nth-child(5){
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+
+}
